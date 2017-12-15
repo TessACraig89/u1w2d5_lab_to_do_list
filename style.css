@@ -2,3 +2,13 @@ h1 {
   display: flex;
   justify-content: center;
 }
+
+.post {
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  list-style: none;
+  text-align: center;
+}
