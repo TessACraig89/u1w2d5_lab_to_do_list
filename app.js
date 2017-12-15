@@ -17,7 +17,7 @@ const publishPost = () => {
   let $listElement = $("<li>");
   let $content = listItems[listItems.length-1];
   $listElement.append($content);
-  $list.append($listElement);
+  $list.prepend($listElement);
 
 }
 //creates pushToArray function
