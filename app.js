@@ -5,10 +5,10 @@ const listItems = [];
 const $delete = "<button class='delete'>Delete</button>"
 
 // //creates done button
-// const $done = "<button>Done</button>"
-//
+const $done = "<button class='done'>Done</button>"
+
 // //creates important button
-// const $important = "<button>Important</button>"
+const $important = "<button class='important'>Important</button>"
 
 //adds click event listener to addButton that triggers pushToArray function
 $( '#addButton').click(event => {
@@ -38,8 +38,10 @@ const publishPost = () => {
   let $content = listItems[listItems.length-1];
   $listElement.append($content);
   $list.prepend($listElement);
-  $listElement.append($delete)
+  $listElement.append($delete + $done + $important)
   deleteButton();
+  doneButton();
+  importantButton();
 }
 //creates pushToArray function
 // stores input value
@@ -57,6 +59,18 @@ const pushToArray = () => {
 const deleteButton = () => {
   $('.delete').click((event) => {
     $(event.target).parent().remove();
+  })
+};
+
+const doneButton = () => {
+  $('.done').click((event) => {
+    $(event.target).parent().css("text-decoration", "line-through")
+  })
+};
+
+const importantButton = () => {
+  $('.important').click((event) => {
+    $(event.target)
   })
 };
 
