@@ -6,6 +6,12 @@ $( '#addButton').click(function() {
   pushToArray();
 });
 
+//adds keyup event listener that triggers pushToArray function if event.which(which keyboard key was pressed) == 13(key code for enter)
+$( '#postBox').keyup(function() {
+  if (event.which == 13) {
+    pushToArray();
+  }
+})
 //creates publishPost function
 // stores <ul>
 // creates and stores list element
